@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-
-class QuizSelection : AppCompatActivity() {
+class TranslateGame : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_selection)
+        setContentView(R.layout.activity_translate_game)
 
         val navigation = BottomNavigationView.OnNavigationItemSelectedListener { item->
             when (item.itemId)
@@ -36,7 +35,5 @@ class QuizSelection : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation)
         bottomNavigationView.setOnNavigationItemSelectedListener(navigation)
-
-
     }
 }

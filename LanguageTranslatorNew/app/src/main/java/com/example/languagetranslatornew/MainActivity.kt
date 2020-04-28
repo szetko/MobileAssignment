@@ -8,10 +8,14 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+
+
 
     @Override
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +23,32 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val navigation = BottomNavigationView.OnNavigationItemSelectedListener { item->
+        when (item.itemId)
+        {R.id.home -> {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            return@OnNavigationItemSelectedListener true
+        }
+            R.id.quiz -> {
+                val intent = Intent(this, QuizSelection::class.java)
+                startActivity(intent)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.TranslateGame -> {
+                val intent = Intent(this, TranslateGame::class.java)
+                startActivity(intent)
+                return@OnNavigationItemSelectedListener true
+            }
+
+        }
+            false
+        }
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener(navigation)
+
 
         quit.setOnClickListener{
 
