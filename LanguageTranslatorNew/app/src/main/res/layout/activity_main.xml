@@ -48,4 +48,19 @@
         app:layout_constraintStart_toEndOf="@+id/alertBtn"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="47dp"
+        android:text="@string/quit"
+        app:layout_constraintBottom_toTopOf="@+id/translateBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizBtn"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
