@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainBackground"
     tools:context=".TranslateGame">
 
     <Button
@@ -12,7 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_x="137dp"
         android:layout_y="103dp"
-        android:text="German" />
+        android:text="German"
+        android:background="@drawable/switch_btn"
+        android:textColor="@color/mainBackground"
+        />
 
     <Button
         android:id="@+id/button6"
@@ -20,7 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_x="139dp"
         android:layout_y="200dp"
-        android:text="Spanish" />
+        android:text="Spanish"
+        android:background="@drawable/switch_btn"
+        android:textColor="@color/mainBackground"/>
 
     <Button
         android:id="@+id/button7"
@@ -28,7 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_x="141dp"
         android:layout_y="300dp"
-        android:text="Russian" />
+        android:text="Russian"
+        android:background="@drawable/switch_btn"
+        android:textColor="@color/mainBackground"/>
 
 
     <Button
@@ -37,7 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_x="141dp"
         android:layout_y="405dp"
-        android:text="Italian" />
+        android:text="Italian"
+        android:background="@drawable/switch_btn"
+        android:textColor="@color/mainBackground"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
