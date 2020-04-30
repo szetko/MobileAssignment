@@ -31,6 +31,7 @@ class Japanese : AppCompatActivity() {
             val toSpeak = textEt.text.toString()
 
             if(toSpeak == "")
+
             {
                 //If there is no text
                 Toast.makeText(this, "There is no text", Toast.LENGTH_SHORT).show()
