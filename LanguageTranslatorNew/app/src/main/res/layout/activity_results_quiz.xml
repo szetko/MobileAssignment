@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultsQuiz">
 
-    <TextView
-        android:id="@+id/grade"
-        android:layout_margin="16dp"
-        android:fontFamily="casual"
-        android:padding="16dp"
-        android:textSize="24sp"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Finish!"
-        />
-    <TextView
-        android:id="@+id/outOf"
-        android:fontFamily="casual"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/grade"
-        android:text="You scored 4 out of 4"
-        android:textAlignment="center"
-        android:textSize="20sp"/>
 
-    <button
-        android:layout_margin="4dp"
-        android:padding="8dp"
-        android:text="Retry Quiz!"
+    <Button
         android:id="@+id/retry"
-        android:layout_below="@+id/outOf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:fontFamily="casual"
-        android:layout_centerHorizontal="true"
-        />
-</RelativeLayout>
+        android:layout_weight="1"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Finished!" />
+
+    <TextView
+        android:id="@+id/outOf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="You scored 4 out of 4" />
+</LinearLayout>

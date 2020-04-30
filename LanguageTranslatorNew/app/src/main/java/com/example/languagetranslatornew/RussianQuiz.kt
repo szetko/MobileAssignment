@@ -43,13 +43,14 @@ class RussianQuiz : AppCompatActivity() {
 
         updateScore(mScore)
         updateqNum(qNum2)
+        updateQuestion()
 
         //Start of Button listener for Button1
         mButtonChoice1.setOnClickListener{
 
 
 
-            if (mButtonChoice4.getText() === mAnswer)
+            if (mButtonChoice1.getText() === mAnswer)
             {
                 mScore++
                 qNum2++
@@ -58,11 +59,9 @@ class RussianQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
                 if(qNum2 == 4)
                 {
+                    Thread.sleep(200)
                     val intent = Intent(this, ResultsQuiz::class.java)
-                    var bundle = Bundle()
-                    bundle.putInt("finalscore", mScore)
-                    intent.putExtras(bundle)
-                    this.finish()
+                    intent.putExtra("finalscore",mScore)
                     startActivity(intent)
                 }
                 else {
@@ -76,11 +75,9 @@ class RussianQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show()
                 if(qNum2 == 4)
                 {
+                    Thread.sleep(200)
                     val intent = Intent(this, ResultsQuiz::class.java)
-                    var bundle = Bundle()
-                    bundle.putInt("finalscore", mScore)
-                    intent.putExtras(bundle)
-                    this.finish()
+                    intent.putExtra("finalscore",mScore)
                     startActivity(intent)
                 }
                 else {
@@ -94,7 +91,7 @@ class RussianQuiz : AppCompatActivity() {
         mButtonChoice2.setOnClickListener{
 
 
-            if (mButtonChoice4.getText() === mAnswer)
+            if (mButtonChoice2.getText() === mAnswer)
             {
                 mScore++
                 qNum2++
@@ -103,11 +100,9 @@ class RussianQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
                 if(qNum2 == 4)
                 {
+                    Thread.sleep(200)
                     val intent = Intent(this, ResultsQuiz::class.java)
-                    var bundle = Bundle()
-                    bundle.putInt("finalscore", mScore)
-                    intent.putExtras(bundle)
-                    this.finish()
+                    intent.putExtra("finalscore",mScore)
                     startActivity(intent)
                 }
                 else {
@@ -121,11 +116,9 @@ class RussianQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show()
                 if(qNum2 == 4)
                 {
+                    Thread.sleep(200)
                     val intent = Intent(this, ResultsQuiz::class.java)
-                    var bundle = Bundle()
-                    bundle.putInt("finalscore", mScore)
-                    intent.putExtras(bundle)
-                    this.finish()
+                    intent.putExtra("finalscore",mScore)
                     startActivity(intent)
                 }
                 else {
@@ -138,7 +131,7 @@ class RussianQuiz : AppCompatActivity() {
         //Start of button choice 3
         mButtonChoice3.setOnClickListener{
 
-            if (mButtonChoice4.getText() === mAnswer)
+            if (mButtonChoice3.getText() === mAnswer)
             {
                 mScore++
                 qNum2++
@@ -147,11 +140,11 @@ class RussianQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
                 if(qNum2 == 4)
                 {
+                    Thread.sleep(200)
+
+
                     val intent = Intent(this, ResultsQuiz::class.java)
-                    var bundle = Bundle()
-                    bundle.putInt("finalscore", mScore)
-                    intent.putExtras(bundle)
-                    this.finish()
+                     intent.putExtra("finalscore",mScore)
                     startActivity(intent)
                 }
                 else {
@@ -165,11 +158,9 @@ class RussianQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show()
                 if(qNum2 == 4)
                 {
+                    Thread.sleep(200)
                     val intent = Intent(this, ResultsQuiz::class.java)
-                    var bundle = Bundle()
-                    bundle.putInt("finalscore", mScore)
-                    intent.putExtras(bundle)
-                    this.finish()
+                    intent.putExtra("finalscore",mScore)
                     startActivity(intent)
                 }
                 else {
@@ -191,11 +182,9 @@ class RussianQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
                 if(qNum2 == 4)
                 {
+                    Thread.sleep(200)
                     val intent = Intent(this, ResultsQuiz::class.java)
-                   var bundle = Bundle()
-                    bundle.putInt("finalscore", mScore)
-                    intent.putExtras(bundle)
-                    this.finish()
+                    intent.putExtra("finalscore",mScore)
                     startActivity(intent)
                 }
                 else {
@@ -209,11 +198,9 @@ class RussianQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show()
                 if(qNum2 == 4)
                 {
+                    Thread.sleep(200)
                     val intent = Intent(this, ResultsQuiz::class.java)
-                    var bundle = Bundle()
-                    bundle.putInt("finalscore", mScore)
-                    intent.putExtras(bundle)
-                    this.finish()
+                    intent.putExtra("finalscore",mScore)
                     startActivity(intent)
                 }
                 else {
