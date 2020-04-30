@@ -26,6 +26,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        translateBtn.setOnClickListener{
+            val intent = Intent(this, TranslateGame::class.java)
+            startActivity(intent)
+
+        }
+
         val navigation = BottomNavigationView.OnNavigationItemSelectedListener { item->
         when (item.itemId)
         {R.id.home -> {

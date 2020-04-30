@@ -7,14 +7,6 @@
     android:background="@color/mainBackground"
     tools:context=".TranslateGame">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/translate"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="89dp" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
@@ -26,5 +18,57 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav" />
+
+    <Button
+        android:id="@+id/germanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="446dp"
+        android:text="German"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/japButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="162dp"
+        android:text="Japenese"
+        app:layout_constraintBottom_toTopOf="@+id/spanishButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/germanButton" />
+
+    <Button
+        android:id="@+id/spanishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="162dp"
+        android:text="Spanish"
+        app:layout_constraintBottom_toTopOf="@+id/frenchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/japButton" />
+
+    <Button
+        android:id="@+id/frenchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="231dp"
+        android:text="FRENCH"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spanishButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
