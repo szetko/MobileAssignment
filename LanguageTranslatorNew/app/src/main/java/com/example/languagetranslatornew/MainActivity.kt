@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             builder2.setMessage("Are you sure, you want to exit?")
 
             builder2.setPositiveButton("Yes") {dialog, which ->
-                finish()
+                finishAffinity()
             }
 
             builder2.setNegativeButton("No") {dialog, which ->

@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/germanQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/japaneseQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
@@ -65,7 +65,7 @@
         android:layout_marginEnd="171dp"
         android:layout_marginBottom="433dp"
         android:background="@drawable/switch_btn"
-        android:text="Italian"
+        android:text="Japanese"
         android:textColor="@color/mainBackground"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_german.*
 import java.util.*
 
@@ -13,6 +14,29 @@ class Spanish : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spanish)
+
+        quit.setOnClickListener{
+
+            //define our theme
+            val builder2 = AlertDialog.Builder(this)
+
+            builder2.setTitle("Exit")
+
+            builder2.setIcon(R.drawable.ic_launcher_background)
+
+            builder2.setMessage("Are you sure, you want to exit?")
+
+            builder2.setPositiveButton("Yes") {dialog, which ->
+                finish()
+            }
+
+            builder2.setNegativeButton("No") {dialog, which ->
+                Toast.makeText(this, "You chose not to exit", Toast.LENGTH_LONG).show()
+            }
+            val dialog : AlertDialog = builder2.create()
+
+            dialog.show()
+        }
         var spanish = Locale("es", "ES")
 
 

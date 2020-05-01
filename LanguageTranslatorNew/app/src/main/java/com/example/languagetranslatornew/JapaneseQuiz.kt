@@ -8,9 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_spanish_quiz.*
+import kotlinx.android.synthetic.main.activity_japanese_quiz.*
 
-class SpanishQuiz : AppCompatActivity() {
+class JapaneseQuiz : AppCompatActivity() {
 
     lateinit var mScoreView: TextView
     lateinit var mQuestionView: TextView
@@ -29,7 +29,7 @@ class SpanishQuiz : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_spanish_quiz)
+        setContentView(R.layout.activity_japanese_quiz)
 
         quit.setOnClickListener{
 
@@ -244,12 +244,12 @@ class SpanishQuiz : AppCompatActivity() {
     {
 
 
-        mQuestionView.setText(mQuestionLibrary.spanishGetQuestion(mQuestionNumber))
-        mButtonChoice1.setText(mQuestionLibrary.spanishGetChoice1(mQuestionNumber))
-        mButtonChoice2.setText(mQuestionLibrary.spanishGetChoice2(mQuestionNumber))
-        mButtonChoice3.setText(mQuestionLibrary.spanishGetChoice3(mQuestionNumber))
-        mButtonChoice4.setText(mQuestionLibrary.spanishGetChoice4(mQuestionNumber))
-        mAnswer = mQuestionLibrary.spanishGetCorrectAnswer(mQuestionNumber)
+        mQuestionView.setText(mQuestionLibrary.japGetQuestion(mQuestionNumber))
+        mButtonChoice1.setText(mQuestionLibrary.japGetChoice1(mQuestionNumber))
+        mButtonChoice2.setText(mQuestionLibrary.japGetChoice2(mQuestionNumber))
+        mButtonChoice3.setText(mQuestionLibrary.japGetChoice3(mQuestionNumber))
+        mButtonChoice4.setText(mQuestionLibrary.japGetChoice4(mQuestionNumber))
+        mAnswer = mQuestionLibrary.japGetCorrectAnswer(mQuestionNumber)
         // image = mQuestionLibrary.getImage()
         mQuestionNumber++
 

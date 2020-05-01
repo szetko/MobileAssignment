@@ -13,11 +13,26 @@ class QuizSelection : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_selection)
 
+        germanQuiz.setOnClickListener{
+            val intent = Intent(this, GermanQuiz::class.java)
+            startActivity(intent)
+        }
+
+        japaneseQuiz.setOnClickListener{
+            val intent = Intent(this, JapaneseQuiz::class.java)
+            startActivity(intent)
+
+        }
 
         russianQuiz.setOnClickListener{
             val intent = Intent(this, RussianQuiz::class.java)
             startActivity(intent)
 
+        }
+
+        spanishQuiz.setOnClickListener{
+            val intent = Intent(this, SpanishQuiz::class.java)
+            startActivity(intent)
         }
 
         val navigation = BottomNavigationView.OnNavigationItemSelectedListener { item->

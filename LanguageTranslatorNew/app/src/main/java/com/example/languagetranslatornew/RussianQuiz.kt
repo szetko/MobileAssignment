@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import kotlinx.android.synthetic.main.activity_russian_quiz.*
 import kotlinx.android.synthetic.main.activity_russian_quiz.view.*
+import kotlinx.android.synthetic.main.activity_russian_quiz.view.quit
 
 class RussianQuiz : AppCompatActivity() {
 
@@ -18,6 +22,7 @@ class RussianQuiz : AppCompatActivity() {
     lateinit var mButtonChoice2:Button
     lateinit var mButtonChoice3:Button
     lateinit var mButtonChoice4:Button
+    lateinit var image:ImageView
     var mScore = 0
     var mAnswer = ""
     var mQuestionNumber = 0
@@ -28,6 +33,29 @@ class RussianQuiz : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_russian_quiz)
+
+        quit.setOnClickListener{
+
+            //define our theme
+            val builder2 = AlertDialog.Builder(this)
+
+            builder2.setTitle("Exit")
+
+            builder2.setIcon(R.drawable.ic_launcher_background)
+
+            builder2.setMessage("Are you sure, you want to exit?")
+
+            builder2.setPositiveButton("Yes") {dialog, which ->
+                finish()
+            }
+
+            builder2.setNegativeButton("No") {dialog, which ->
+                Toast.makeText(this, "You chose not to exit", Toast.LENGTH_LONG).show()
+            }
+            val dialog : AlertDialog = builder2.create()
+
+            dialog.show()
+        }
 
 
 
@@ -201,6 +229,7 @@ class RussianQuiz : AppCompatActivity() {
                     Thread.sleep(200)
                     val intent = Intent(this, ResultsQuiz::class.java)
                     intent.putExtra("finalscore",mScore)
+
                     startActivity(intent)
                 }
                 else {
@@ -224,6 +253,7 @@ class RussianQuiz : AppCompatActivity() {
             mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber))
             mButtonChoice4.setText(mQuestionLibrary.getChoice4(mQuestionNumber))
             mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber)
+           // image = mQuestionLibrary.getImage()
             mQuestionNumber++
 
 
@@ -239,5 +269,6 @@ class RussianQuiz : AppCompatActivity() {
     {
         qNum.setText("" + qNum2)
     }
+
 
 }

@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context=".RussianQuiz">
+    tools:context=".GermanQuiz">
 
     <RelativeLayout
         android:layout_width="match_parent"

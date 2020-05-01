@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultsQuiz"></activity>
+        <activity android:name=".SpanishQuiz"></activity>
+        <activity android:name=".GermanQuiz" />
+        <activity android:name=".JapaneseQuiz" />
+        <activity android:name=".ResultsQuiz" />
         <activity android:name=".RussianQuiz" />
         <activity android:name=".QuestionLibrary" />
         <activity android:name=".Japanese" />
