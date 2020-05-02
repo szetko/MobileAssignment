@@ -1,71 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".German">
 
-    <EditText
-        android:id="@+id/textEt"
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtTxtLang2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="615dp"
-        android:gravity="start"
-        android:hint="Enter text to translate"
-        android:minHeight="100dp"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:ems="10"
+        android:hint="Type Here..."
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/speakBtn"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtVLang2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLang2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLang2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Translate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinLang2" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinLang2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtLang2" />
+
+    <Button
+        android:id="@+id/speakBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="541dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="438dp"
+        android:text="SPEAK"
         android:drawableLeft="@drawable/ic_speak"
         android:drawablePadding="5dp"
-        android:text="Speak"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/stopBtn"
+        app:layout_constraintEnd_toStartOf="@+id/stopBtn2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEt" />
+        app:layout_constraintTop_toBottomOf="@+id/txtVLang2" />
 
     <Button
-        android:id="@+id/stopBtn"
+        android:id="@+id/stopBtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="541dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="443dp"
+        android:text="STOP"
         android:drawableLeft="@drawable/ic_stop"
         android:drawablePadding="5dp"
-        android:text="Stop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/speakBtn"
-        app:layout_constraintTop_toBottomOf="@+id/textEt" />
+        app:layout_constraintStart_toEndOf="@+id/speakBtn2"
+        app:layout_constraintTop_toBottomOf="@+id/txtVLang2" />
 
     <Button
-        android:id="@+id/quit"
+        android:id="@+id/quit2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="388dp"
-        android:text="Quit"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="367dp"
+        android:text="QUIT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speakBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/stopBtn2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,7 @@ IDataDownloadComplete {
 
     private lateinit var rawDataAsyncTask: RawDataAsyncTask
 
-   // lateinit var mTTS: TextToSpeech
+    lateinit var mTTS: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +36,7 @@ IDataDownloadComplete {
             val formatLang: String = fromLang + toLang
             val url: String = createURI(
                 "https://translate.yandex.net/api/v1.5/tr.json/translate",
-                "trnsl.1.1.20200329T025311Z.37f6897b8a99dbd9.bb42d876c007fde0812c365015625fde8c0f0163",
+                "trnsl.1.1.20200502T010558Z.6bae7f1e6af0e895.700691dd37b0367d9db73b4f093e69b875caa5de",
                 edtTxtLang.text.toString(), formatLang
             )
             rawDataAsyncTask = RawDataAsyncTask(this, this@French)
@@ -76,7 +76,7 @@ IDataDownloadComplete {
         }
 
 
-       /* quit.setOnClickListener{
+        quit1.setOnClickListener{
 
             //define our theme
             val builder2 = AlertDialog.Builder(this)
@@ -110,9 +110,9 @@ IDataDownloadComplete {
         })
 
         //speak button click
-        speakBtn.setOnClickListener{
+        speakBtn1.setOnClickListener{
             //get text from edittext field
-            val toSpeak = textEt.text.toString()
+            val toSpeak = txtVLang.text.toString()
             if(toSpeak == "")
             {
                 //If there is no text
@@ -125,7 +125,7 @@ IDataDownloadComplete {
             }
         }
         //stop speaking button click
-        stopBtn.setOnClickListener{
+        stopBtn1.setOnClickListener{
             if(mTTS.isSpeaking)
             {
                 //if speaking then stop
@@ -143,6 +143,6 @@ IDataDownloadComplete {
         {
             mTTS.stop()
         }
-        super.onPause()*/
+        super.onPause()
     }
 }

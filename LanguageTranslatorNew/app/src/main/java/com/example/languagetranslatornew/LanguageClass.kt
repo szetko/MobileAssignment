@@ -7,8 +7,9 @@ class LanguageClass {
     fun code(lang: String): String {
         return when(lang) {
             "French" -> "fr"
-            "Japanese" -> "jp"
+            "Japanese" -> "ja"
             "Spanish" -> "es"
+            "German" -> "de"
             else -> "en"
         }
     }

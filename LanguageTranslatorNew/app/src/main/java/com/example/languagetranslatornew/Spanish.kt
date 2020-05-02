@@ -1,21 +1,83 @@
 package com.example.languagetranslatornew
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.util.Log
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_german.*
+import kotlinx.android.synthetic.main.activity_japanese.*
+import kotlinx.android.synthetic.main.activity_spanish.*
 import java.util.*
 
-class Spanish : AppCompatActivity() {
-    lateinit var mTTS:TextToSpeech
+class Spanish : AppCompatActivity(), IDataDownloadAvailable,
+    IDataDownloadComplete {
+
+
+    private lateinit var rawDataAsyncTask: RawDataAsyncTask
+
+    lateinit var mTTS: TextToSpeech
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spanish)
 
-        quit.setOnClickListener{
+        val languages: Array<String> = resources.getStringArray(R.array.languages)
+        populateSpinner(spinLang4, languages)
+
+        btnLang4.setOnClickListener {
+            val fromLang = "en-"
+            val language = LanguageClass()
+            val toLang: String = language.code(spinLang4.selectedItem.toString())
+            val formatLang: String = fromLang + toLang
+            val url: String = createURI(
+                "https://translate.yandex.net/api/v1.5/tr.json/translate",
+                "trnsl.1.1.20200329T025311Z.37f6897b8a99dbd9.bb42d876c007fde0812c365015625fde8c0f0163",
+                edtTxtLang4.text.toString(), formatLang
+            )
+            rawDataAsyncTask = RawDataAsyncTask(this, this@Spanish)
+            rawDataAsyncTask.execute(url)
+        }
+    }
+
+    private fun populateSpinner(spinner: Spinner, array: Array<String>){
+        val layoutID: Int = android.R.layout.simple_spinner_item
+        spinner.adapter = ArrayAdapter(this@Spanish, layoutID, array)
+    }
+
+    private fun createURI(
+        baseURL: String, key: String, text: String,
+        lang: String
+    ): String {
+        return Uri.parse(baseURL)
+            .buildUpon()
+            .appendQueryParameter("key", key)
+            .appendQueryParameter("text", text)
+            .appendQueryParameter("lang", lang)
+            .build().toString()
+    }
+    override fun onDataAvailable(data: String) {
+        Log.d("Spanish", "onDataAvailable - {data}")
+        txtVLang4.text = data
+    }
+
+    override fun onError(e: Exception) {
+        Log.d("Spanish", "onError = {e.message}")
+    }
+
+    override fun onDownloadComplete(data: String, status: DownloadStatus) {
+        if (status == DownloadStatus.OK) {
+            val yandexAsyncTask = YandexAsyncTask(this)
+            yandexAsyncTask.execute(data)
+        }
+
+
+        quit4.setOnClickListener{
 
             //define our theme
             val builder2 = AlertDialog.Builder(this)
@@ -37,21 +99,23 @@ class Spanish : AppCompatActivity() {
 
             dialog.show()
         }
-        var spanish = Locale("es", "ES")
 
+
+        var spanish = Locale("es", "ES")
 
         mTTS = TextToSpeech(applicationContext, TextToSpeech.OnInitListener { status ->
             if(status != TextToSpeech.ERROR)
             {
+
                 //if there is no error then set language
                 mTTS.language = spanish
             }
         })
 
         //speak button click
-        speakBtn.setOnClickListener{
+        speakBtn4.setOnClickListener{
             //get text from edittext field
-            val toSpeak = textEt.text.toString()
+            val toSpeak = txtVLang4.text.toString()
             if(toSpeak == "")
             {
                 //If there is no text
@@ -64,7 +128,7 @@ class Spanish : AppCompatActivity() {
             }
         }
         //stop speaking button click
-        stopBtn.setOnClickListener{
+        stopBtn4.setOnClickListener{
             if(mTTS.isSpeaking)
             {
                 //if speaking then stop

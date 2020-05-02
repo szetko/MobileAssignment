@@ -7,7 +7,7 @@
     <string name="on_data_available" translatable="false">onDataAvailable - %1$s</string>
     <string name="on_error" translatable="false">onError - %1$s</string>
     <string name="base_url" translatable="false">https://translate.yandex.net/api/v1.5/tr.json/translate</string>
-    <string name="key" translatable="false">trnsl.1.1.20200329T025311Z.37f6897b8a99dbd9.bb42d876c007fde0812c365015625fde8c0f0163</string>
+    <string name="key" translatable="false">trnsl.1.1.20200502T010558Z.6bae7f1e6af0e895.700691dd37b0367d9db73b4f093e69b875caa5de</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
