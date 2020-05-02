@@ -4,8 +4,12 @@
     <string name="quiz">QUIZ</string>
     <string name="translate">TRANSLATE</string>
     <string name="quit">quit</string>
+    <string name="on_data_available" translatable="false">onDataAvailable - %1$s</string>
+    <string name="on_error" translatable="false">onError - %1$s</string>
+    <string name="base_url" translatable="false">https://translate.yandex.net/api/v1.5/tr.json/translate</string>
+    <string name="key" translatable="false">trnsl.1.1.20200329T025311Z.37f6897b8a99dbd9.bb42d876c007fde0812c365015625fde8c0f0163</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 </resources>

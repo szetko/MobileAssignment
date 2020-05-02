@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#575757"
     tools:context=".SplashScreen">
 
     <ImageView
@@ -20,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome"
+        android:textColor="#ffffff"
         android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
         android:paddingTop="30dp"/>

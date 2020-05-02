@@ -1,21 +1,82 @@
 package com.example.languagetranslatornew
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.util.Log
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import kotlinx.android.synthetic.main.activity_french.*
 import kotlinx.android.synthetic.main.activity_german.*
+import org.intellij.lang.annotations.Language
 import java.util.*
 
-class French : AppCompatActivity() {
-    lateinit var mTTS: TextToSpeech
+class French : AppCompatActivity(), IDataDownloadAvailable,
+IDataDownloadComplete {
+
+
+    private lateinit var rawDataAsyncTask: RawDataAsyncTask
+
+   // lateinit var mTTS: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_french)
 
-        quit.setOnClickListener{
+        val languages: Array<String> = resources.getStringArray(R.array.languages)
+        populateSpinner(spinLang, languages)
+
+        btnLang.setOnClickListener {
+            val fromLang = "en-"
+            val language = LanguageClass()
+            val toLang: String = language.code(spinLang.selectedItem.toString())
+            val formatLang: String = fromLang + toLang
+            val url: String = createURI(
+                "https://translate.yandex.net/api/v1.5/tr.json/translate",
+                "trnsl.1.1.20200329T025311Z.37f6897b8a99dbd9.bb42d876c007fde0812c365015625fde8c0f0163",
+                edtTxtLang.text.toString(), formatLang
+            )
+            rawDataAsyncTask = RawDataAsyncTask(this, this@French)
+            rawDataAsyncTask.execute(url)
+        }
+    }
+
+    private fun populateSpinner(spinner: Spinner, array: Array<String>){
+        val layoutID: Int = android.R.layout.simple_spinner_item
+        spinner.adapter = ArrayAdapter(this@French, layoutID, array)
+    }
+
+    private fun createURI(
+        baseURL: String, key: String, text: String,
+        lang: String
+    ): String {
+        return Uri.parse(baseURL)
+            .buildUpon()
+            .appendQueryParameter("key", key)
+            .appendQueryParameter("text", text)
+            .appendQueryParameter("lang", lang)
+            .build().toString()
+    }
+    override fun onDataAvailable(data: String) {
+        Log.d("French", "onDataAvailable - {data}")
+        txtVLang.text = data
+    }
+
+    override fun onError(e: Exception) {
+        Log.d("French", "onError = {e.message}")
+    }
+
+    override fun onDownloadComplete(data: String, status: DownloadStatus) {
+        if (status == DownloadStatus.OK) {
+            val yandexAsyncTask = YandexAsyncTask(this)
+            yandexAsyncTask.execute(data)
+        }
+
+
+       /* quit.setOnClickListener{
 
             //define our theme
             val builder2 = AlertDialog.Builder(this)
@@ -82,6 +143,6 @@ class French : AppCompatActivity() {
         {
             mTTS.stop()
         }
-        super.onPause()
+        super.onPause()*/
     }
 }

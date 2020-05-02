@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.languagetranslatornew">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SpanishQuiz"></activity>
+        <activity android:name=".ProgressBar"></activity>
+        <activity android:name=".YandexAsyncTask" />
+        <activity android:name=".RawDataAsyncTask" />
+        <activity android:name=".LanguageClass" />
+        <activity android:name=".SpanishQuiz" />
         <activity android:name=".GermanQuiz" />
         <activity android:name=".JapaneseQuiz" />
         <activity android:name=".ResultsQuiz" />
