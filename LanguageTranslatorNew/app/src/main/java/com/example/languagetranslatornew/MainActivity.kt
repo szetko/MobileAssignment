@@ -89,10 +89,9 @@ class MainActivity : AppCompatActivity() {
             builder.setTitle("Instructions")
 
             builder.setIcon(R.drawable.ic_launcher_background)
-            builder.setMessage("Getting started using Language Translate" +
-                    "- Press the play button" +
-                    "- Select a Language" +
-                    "- Enter the word you would like to translate")
+            builder.setMessage("Getting started using Language Translate\n" +
+                    "- Press the Quiz button and select a quiz\n" +
+                    "- Press Translate and enter a word to translate\n")
             builder.setPositiveButton("Ok, got it!", null)
             val dialog : AlertDialog = builder.create()
             dialog.show()
@@ -116,10 +115,10 @@ class MainActivity : AppCompatActivity() {
         if(isNightModeOn)
         {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            switchBtn.text = "Disable Dark Mode"
+            switchBtn.text = "Day Mode"
         }else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            switchBtn.text = "Enable Dark Mode"
+            switchBtn.text = "Night Mode"
         }
 
         switchBtn.setOnClickListener(View.OnClickListener {
@@ -128,14 +127,14 @@ class MainActivity : AppCompatActivity() {
                 sharedPrefsEdit.putBoolean("NightMode", false)
                 sharedPrefsEdit.apply()
 
-                switchBtn.text = "Enable Dark Mode"
+                switchBtn.text = "Night Mode"
 
             }else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 sharedPrefsEdit.putBoolean("NightMode", true)
                 sharedPrefsEdit.apply()
 
-                switchBtn.text = "Disable Dark Mode"
+                switchBtn.text = "Day Mode"
             }
 
         })

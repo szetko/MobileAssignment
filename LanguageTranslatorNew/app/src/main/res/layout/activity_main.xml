@@ -10,62 +10,68 @@
 
     <Button
         android:id="@+id/alertBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="160dp"
+        android:background="@drawable/custombutton"
         android:text="@string/how_to_play"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp"
-        android:background="@drawable/switch_btn"
-        android:textColor="@color/mainBackground"/>
+        android:textColor="@color/mainBackground"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/quizBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/quizBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@drawable/switch_btn"
-        android:textColor="@color/mainBackground"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="158dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/quiz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/alertBtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/translateBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/switch_btn"
+        android:layout_marginEnd="160dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textSize="20sp"
+        android:background="@drawable/custombutton"
+        android:text="Quiz"
         android:textColor="@color/mainBackground"
-        android:text="@string/translate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/alertBtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/quit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="175dp"
-        android:layout_marginEnd="169dp"
-        android:layout_marginBottom="47dp"
-        android:background="@drawable/switch_btn"
-        android:textColor="@color/mainBackground"
-        android:text="@string/quit"
         app:layout_constraintBottom_toTopOf="@+id/translateBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alertBtn" />
+
+    <Button
+        android:id="@+id/translateBtn"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textSize="20sp"
+        android:background="@drawable/custombutton"
+        android:text="Translate"
+        android:textColor="@color/mainBackground"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/quit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizBtn" />
+
+    <Button
+        android:id="@+id/quit"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="160dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textSize="20sp"
+        android:background="@drawable/custombutton"
+        android:text="Quit"
+        android:textColor="@color/mainBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/translateBtn" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -80,20 +86,24 @@
         app:menu="@menu/bottom_nav" />
 
 
-
     <Button
         android:id="@+id/switchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/switch_btn"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
-        android:text="Enable Dark Mode"
-        android:background="@drawable/switch_btn"
+        android:text="DARK MODE"
         android:textColor="@color/mainBackground"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/translateBtn" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

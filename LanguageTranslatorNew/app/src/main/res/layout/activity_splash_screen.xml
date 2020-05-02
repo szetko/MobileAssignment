@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#575757"
+    android:background="#6200EE"
     tools:context=".SplashScreen">
 
     <ImageView
@@ -16,7 +16,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 
-    <TextView
+    <!--<TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,5 +24,5 @@
         android:textColor="#ffffff"
         android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
-        android:paddingTop="30dp"/>
+        android:paddingTop="30dp"/>-->
 </RelativeLayout>
