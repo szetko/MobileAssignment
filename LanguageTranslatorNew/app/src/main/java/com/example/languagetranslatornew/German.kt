@@ -105,7 +105,10 @@ class German : AppCompatActivity(), IDataDownloadAvailable,
 
             dialog.show()
         }
-
+        /**
+         * Text to speech for application, if there is no error then translate the language to German.
+         *
+         */
 
 
         mTTS = TextToSpeech(applicationContext, TextToSpeech.OnInitListener { status ->
@@ -115,7 +118,10 @@ class German : AppCompatActivity(), IDataDownloadAvailable,
                 mTTS.language = Locale.GERMAN
             }
         })
-
+        /**
+         * Toast's to display a message if there is no text entered in the textView
+         * or if there is text then speak.
+         */
         //speak button click
         speakBtn2.setOnClickListener{
             //get text from edittext field
@@ -144,6 +150,10 @@ class German : AppCompatActivity(), IDataDownloadAvailable,
             }
         }
     }
+
+    /**
+     * Method to stop the speaking, implement this method in the stop button when it is clicked then implement the onPause method.
+     */
     override fun onPause()
     {
         if(mTTS.isSpeaking)

@@ -24,20 +24,20 @@ class ResultsQuiz : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_results_quiz)
 
-
+        // Pass the extra from the quiz activity to this activity and store in variable scoreName
         val mFinalScore = findViewById<TextView>(R.id.outOf)
         val scoreName = intent.getIntExtra("finalscore", 0)
 
-
+        // Display the score using the scoreName variable from the quiz activities.
         mFinalScore.text = "You scored " +scoreName+" out of 4!"
-
+        //retry button set on click to take back to quiz selection activity
         retry.setOnClickListener{
             val intent2 = Intent(this, QuizSelection::class.java)
 
 
             startActivity(intent2)
         }
-
+    // takes the user to home screen when clicked.
         home.setOnClickListener{
             val intent3 = Intent(this, MainActivity::class.java)
             startActivity(intent3)

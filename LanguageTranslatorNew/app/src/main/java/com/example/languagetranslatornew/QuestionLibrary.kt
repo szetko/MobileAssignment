@@ -52,6 +52,11 @@ class QuestionLibrary : AppCompatActivity() {
 
     }*/
 
+    /**
+     * All methods below to get a different question, set of choices and answer from
+     * each of the arrays. These methods are then called in each of the quiz activities to get a value
+     * from the chosen array.
+     */
 
     fun getQuestion(a: Int): String {
 

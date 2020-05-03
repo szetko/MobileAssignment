@@ -148,6 +148,10 @@ class Spanish : AppCompatActivity(), IDataDownloadAvailable,
             }
         }
     }
+    /**
+     * To stop the speech when it is running, being implemented on the stop button
+     */
+
     override fun onPause()
     {
         if(mTTS.isSpeaking)

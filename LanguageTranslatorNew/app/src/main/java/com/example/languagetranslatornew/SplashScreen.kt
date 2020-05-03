@@ -18,7 +18,9 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-
+        /**
+         * rotate , anti_roate and fade out have been set under the anim folder
+         */
         val animation_1 = AnimationUtils.loadAnimation(baseContext, R.anim.rotate)
         val animation_2 = AnimationUtils.loadAnimation(baseContext, R.anim.anti_rotate)
         val animation_3 = AnimationUtils.loadAnimation(baseContext, R.anim.abc_fade_out)
@@ -57,7 +59,9 @@ class SplashScreen : AppCompatActivity() {
 
         })
 
-
+        /**
+         * Sleeps the MainActivity for 5 seconds while the animation runs
+         */
         val background = object : Thread() {
             override fun run() {
                 try {

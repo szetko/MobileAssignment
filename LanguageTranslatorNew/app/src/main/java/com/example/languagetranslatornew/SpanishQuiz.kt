@@ -81,6 +81,12 @@ class SpanishQuiz : AppCompatActivity() {
         mButtonChoice1.setOnClickListener{
 
 
+            /**
+             * Each of the four buttons which are storing the different choices from the arrays in questionLibrary
+             * are run through checks everytime they are pressed to see if they have the correct answer, the wrong answer
+             * or they have reached the limit of questions. This same logic is applied to each of the quizes.
+             */
+
 
             if (mButtonChoice1.getText() === mAnswer)
             {
@@ -246,6 +252,13 @@ class SpanishQuiz : AppCompatActivity() {
 
 
     }
+
+    /**
+     * This method binds the data from the get methods in the question library class.
+     * Each time the update questions method used it will bind a new string to each of the choices,answer, and question textview's
+     * and button from one of the arrays which are set in the questionlibrary class.
+     */
+
 
     fun updateQuestion()
     {

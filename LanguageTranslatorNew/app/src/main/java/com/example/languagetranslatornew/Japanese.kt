@@ -52,11 +52,18 @@ class Japanese : AppCompatActivity(), IDataDownloadAvailable,
         }
     }
 
+    /**
+     * Populates the spinner
+     */
     private fun populateSpinner(spinner: Spinner, array: Array<String>){
         val layoutID: Int = android.R.layout.simple_spinner_item
         spinner.adapter = ArrayAdapter(this@Japanese, layoutID, array)
     }
 
+    /**
+     * Binds the parameters to create the uri - uses key text and lang from the strings XML. This
+     * same code is used across four different activities for each of the languages.
+     */
     private fun createURI(
         baseURL: String, key: String, text: String,
         lang: String
@@ -73,9 +80,13 @@ class Japanese : AppCompatActivity(), IDataDownloadAvailable,
         txtVLang3.text = data
     }
 
+    /**
+     * Displays an error message if that text-to-text translation does not work in the LogCat
+     */
     override fun onError(e: Exception) {
         Log.d("Japanese", "onError = {e.message}")
     }
+
 
     override fun onDownloadComplete(data: String, status: DownloadStatus) {
         if (status == DownloadStatus.OK) {
@@ -107,7 +118,9 @@ class Japanese : AppCompatActivity(), IDataDownloadAvailable,
             dialog.show()
         }
 
-
+        /**
+         * Pass the Locale Japanese to use the text to speech on the app.
+         */
 
         mTTS = TextToSpeech(applicationContext, TextToSpeech.OnInitListener { status ->
             if(status != TextToSpeech.ERROR)
@@ -145,6 +158,10 @@ class Japanese : AppCompatActivity(), IDataDownloadAvailable,
             }
         }
     }
+
+    /**
+     * To stop the speech when it is running, being implemented on the stop button
+     */
     override fun onPause()
     {
         if(mTTS.isSpeaking)
