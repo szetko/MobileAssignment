@@ -7,6 +7,8 @@
 <p>On the translate game activity it displays 4 seperate buttons which take the user to a different translate game for each of the four displayed languages</p>
 
 ![](Images/QuizSelection.PNG)<br>
+<p>In the quiz selection activity it displays 4 seperate buttons which take the user to a different quiz game upon clicking the buttons</p>
+
 ![](Images/SplashScreen.PNG)<br>
 ![](Images/GermanTranslate.PNG)<br>
 ![](Images/GermanQuiz.PNG)<br>
