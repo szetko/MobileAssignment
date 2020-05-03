@@ -8,6 +8,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
+    android:background="@color/mainBackground"
     tools:context=".GermanQuiz">
 
     <RelativeLayout
@@ -42,46 +43,60 @@
         android:text="Which thing is alive?"
         android:textSize="20sp"
         android:paddingTop="0dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
 
         />
 
     <Button
         android:id="@+id/choice1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custombutton"
+        android:textColor="@color/mainBackground"
+        android:textSize="20sp"
         android:text="bird"
         android:padding="0dp"
         android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/choice2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custombutton"
+        android:textColor="@color/mainBackground"
+        android:textSize="20sp"
         android:text="wood"
         android:padding="0dp"
         android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/choice3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custombutton"
+        android:textColor="@color/mainBackground"
+        android:textSize="20sp"
         android:text="rock"
         android:padding="0dp"
         android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/choice4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custombutton"
+        android:textColor="@color/mainBackground"
+        android:textSize="20sp"
         android:text="rock"
         android:padding="0dp"
         android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/quit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:background="@drawable/switch_btn"
+        android:textColor="@color/mainBackground"
         android:layout_marginBottom="24dp"
         android:padding="0dp"
         android:text="Quit" />
@@ -92,13 +107,9 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="20sp"
+        android:visibility="gone"
         />
 
-    <ImageView
-        android:id="@+id/qImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_games" />
 
 
 </LinearLayout>

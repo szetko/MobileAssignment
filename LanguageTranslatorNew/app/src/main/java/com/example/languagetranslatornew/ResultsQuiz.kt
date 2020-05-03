@@ -21,7 +21,7 @@ class ResultsQuiz : AppCompatActivity() {
         val scoreName = intent.getIntExtra("finalscore", 0)
 
 
-        mFinalScore.text = "Score:" +scoreName+"out of 4"
+        mFinalScore.text = "You scored " +scoreName+" out of 4!"
 
         retry.setOnClickListener{
             val intent2 = Intent(this, QuizSelection::class.java)
