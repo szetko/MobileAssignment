@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">LanguageTranslatorNew</string>
+    <string name="how_to_play">HOW TO PLAY</string>
+    <string name="quiz">QUIZ</string>
+    <string name="translate">TRANSLATE</string>
+    <string name="quit">quit</string>
+    <string name="on_data_available" translatable="false">onDataAvailable - %1$s</string>
+    <string name="on_error" translatable="false">onError - %1$s</string>
+    <string name="base_url" translatable="false">https://translate.yandex.net/api/v1.5/tr.json/translate</string>
+    <string name="key" translatable="false">trnsl.1.1.20200502T010558Z.6bae7f1e6af0e895.700691dd37b0367d9db73b4f093e69b875caa5de</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="Translate" />
 </resources>

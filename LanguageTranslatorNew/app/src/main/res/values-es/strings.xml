@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LanguageTranslatorNew</string>
+    <string name="translate">Traducir</string>
+    <string name="quiz">Examen</string>
+    <string name="how_to_play">Como jugar</string>
+    <string name="quit">Dejar</string>
+    <string name="Translate" />
+</resources>

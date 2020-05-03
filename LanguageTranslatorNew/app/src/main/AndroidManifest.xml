@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.languagetranslatornew">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,20 +11,46 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".QuizSelection" />
-        <activity android:name=".SplashScreen"
-            android:theme="@style/AppTheme"
-            android:noHistory="true">
+        <activity android:name=".ProgressBar"></activity>
+        <activity android:name=".YandexAsyncTask" />
+        <activity android:name=".RawDataAsyncTask" />
+        <activity android:name=".LanguageClass" />
+        <activity android:name=".SpanishQuiz"
+            android:label="Spanish Quiz"/>
+        <activity android:name=".GermanQuiz"
+            android:label="German Quiz"/>
+        <activity android:name=".JapaneseQuiz"
+            android:label="Japanese Quiz"/>
+        <activity android:name=".ResultsQuiz"
+            android:label="Results"/>
+        <activity android:name=".RussianQuiz"
+            android:label="Russian Translator"/>
+        <activity android:name=".QuestionLibrary" />
+        <activity android:name=".Japanese"
+            android:label="Japanese Translator"/>
+        <activity android:name=".French"
+            android:label="French Translator"/>
+        <activity android:name=".Spanish"
+            android:label="Spanish Translator"/>
+        <activity android:name=".German"
+            android:label="German Translator"/>
+        <activity android:name=".TranslateGame"
+            android:label="Language Translator"/>
+        <activity android:name=".QuizSelection"
+            android:label="Quiz Selection"/>
+        <activity
+            android:name=".SplashScreen"
+            android:label="Language Translator"
+            android:noHistory="true"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"
+            android:label="Language Translator"/>
     </application>
 
 </manifest>

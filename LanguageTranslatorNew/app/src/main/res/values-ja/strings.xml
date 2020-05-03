@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LanguageTranslatorNew</string>
+    <string name="how_to_play">Asobikata</string>
+    <string name="quiz">Kuizu</string>
+    <string name="translate">Hon\'yaku suru</string>
+    <string name="quit">Shuryo suru</string>
+    <string name="Translate" />
+</resources>
